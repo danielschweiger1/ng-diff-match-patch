@@ -1,9 +1,9 @@
 export declare const enum DiffOp {
     Delete = -1,
     Equal = 0,
-    Insert = 1,
+    Insert = 1
 }
-export declare type Diff = [DiffOp, string];
+export type Diff = [DiffOp, string];
 /**
  * Class containing the diff, match and patch methods.
 
@@ -63,7 +63,7 @@ declare class DiffMatchPatch {
      * @return  Array of diff tuples.
   
      */
-    diff_lineMode_(text1: string, text2: string, deadline: number): [DiffOp, string][];
+    diff_lineMode_(text1: string, text2: string, deadline: number): Diff[];
     /**
      * Find the 'middle snake' of a diff, split the problem in two
      * and return the recursively constructed diff.
@@ -86,7 +86,7 @@ declare class DiffMatchPatch {
      * @return  Array of diff tuples.
   
      */
-    diff_bisectSplit_(text1: string, text2: string, x: number, y: number, deadline: number): [DiffOp, string][];
+    diff_bisectSplit_(text1: string, text2: string, x: number, y: number, deadline: number): Diff[];
     /**
      * Split two texts into an array of strings.  Reduce the texts to a string of
      * hashes where each Unicode character represents one line.
@@ -206,7 +206,7 @@ declare class DiffMatchPatch {
      * @param  diffs Array of diff tuples.
      * @return  HTML representation.
      */
-    diff_prettyHtml: (diffs: [DiffOp, string][]) => string;
+    diff_prettyHtml: (diffs: Array<Diff>) => string;
     /**
      * Compute and return the source text (all equalities and deletions).
      * @param  diffs Array of diff tuples.
@@ -330,7 +330,7 @@ declare class DiffMatchPatch {
      * Intended to be called only from within patch_apply.
      * @param  patches Array of Patch objects.
      */
-    patch_splitMax: (patches: patch_obj[]) => void;
+    patch_splitMax: (patches: Array<patch_obj>) => void;
     /**
      * Take a list of patches and return a textual representation.
      * @param  patches Array of Patch objects.

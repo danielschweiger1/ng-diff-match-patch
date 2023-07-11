@@ -1,5 +1,6 @@
 import { OnInit, OnChanges } from '@angular/core';
 import { DiffMatchPatchService } from './diffMatchPatch.service';
+import * as i0 from "@angular/core";
 export declare class LineCompareComponent implements OnInit, OnChanges {
     private dmp;
     left: string | number | boolean;
@@ -10,10 +11,12 @@ export declare class LineCompareComponent implements OnInit, OnChanges {
     constructor(dmp: DiffMatchPatchService);
     ngOnInit(): void;
     ngOnChanges(): void;
-    private updateHtml();
-    private calculateLineDiff(diffs);
-    private outputEqualDiff(diffLines, diffCalculation, isFirstDiff, isLastDiff);
-    private outputEqualDiffLines(diffLines, diffCalculation);
-    private outputDeleteDiff(diffLines, diffCalculation);
-    private outputInsertDiff(diffLines, diffCalculation);
+    private updateHtml;
+    private calculateLineDiff;
+    private outputEqualDiff;
+    private outputEqualDiffLines;
+    private outputDeleteDiff;
+    private outputInsertDiff;
+    static ɵfac: i0.ɵɵFactoryDeclaration<LineCompareComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<LineCompareComponent, "dmp-line-compare", never, { "left": { "alias": "left"; "required": false; }; "right": { "alias": "right"; "required": false; }; "lineContextSize": { "alias": "lineContextSize"; "required": false; }; }, {}, never, never, false, never>;
 }

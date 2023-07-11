@@ -2,8 +2,8 @@
   "name": "ng-diff-match-patch",
   "version": "2.0.6",
   "description": "A Diff-Match-Patch component for your Angular 2 + applications",
-  "main": "bundles/ng-diff-match-patch.umd.js",
-  "module": "fesm5/ng-diff-match-patch.js",
+  "main": "diffMatchPatch.bundle.js",
+  "module": "fesm2022/ng-diff-match-patch.mjs",
   "jsnext:main": "diffMatchPatch.module.js",
   "types": "diffMatchPatch.module.d.ts",
   "repository": {
@@ -25,18 +25,23 @@
   ],
   "homepage": "https://github.com/elliotforbes/ng-diff-match-patch#readme",
   "peerDependencies": {
-    "@angular/common": ">=2.0.0",
-    "@angular/core": ">=2.0.0"
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0"
   },
-  "es2015": "fesm2015/ng-diff-match-patch.js",
-  "esm5": "esm5/ng-diff-match-patch.js",
-  "esm2015": "esm2015/ng-diff-match-patch.js",
-  "fesm5": "fesm5/ng-diff-match-patch.js",
-  "fesm2015": "fesm2015/ng-diff-match-patch.js",
-  "typings": "ng-diff-match-patch.d.ts",
-  "metadata": "ng-diff-match-patch.metadata.json",
-  "sideEffects": false,
   "dependencies": {
-    "tslib": "^1.9.0"
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/ng-diff-match-patch.mjs",
+      "esm": "./esm2022/ng-diff-match-patch.mjs",
+      "default": "./fesm2022/ng-diff-match-patch.mjs"
+    }
   }
 }
