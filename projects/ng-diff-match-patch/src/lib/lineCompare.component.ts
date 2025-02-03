@@ -14,8 +14,8 @@ type DiffCalculation = {
 };
 
 @Component({
-  selector: 'dmp-line-compare',
-  styles: [`
+    selector: 'dmp-line-compare',
+    styles: [`
     div.dmp-line-compare {
       display: flex;
       flex-direction: row;
@@ -90,7 +90,7 @@ type DiffCalculation = {
       border-right: 1px solid #888888;
     }
   `],
-  template: `
+    template: `
     <div class="dmp-line-compare-no-changes-text" *ngIf="isContentEqual">
       There are no changes to display.
     </div>    
@@ -110,7 +110,8 @@ type DiffCalculation = {
         </div>
       </div>
     </div>
-  `
+  `,
+    standalone: false
 })
 export class LineCompareComponent implements OnInit, OnChanges {
   @Input()

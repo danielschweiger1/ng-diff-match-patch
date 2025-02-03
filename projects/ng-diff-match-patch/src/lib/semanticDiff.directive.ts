@@ -3,7 +3,8 @@ import { DiffMatchPatchService } from './diffMatchPatch.service';
 import { Diff, DiffOp } from './diffMatchPatch';
 
 @Directive({
-  selector: '[semanticDiff]'
+    selector: '[semanticDiff]',
+    standalone: false
 })
 export class SemanticDiffDirective implements OnInit, OnChanges {
   @Input() left: string | number | boolean = '';

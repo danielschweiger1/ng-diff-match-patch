@@ -31,22 +31,22 @@
   },
   "homepage": "https://github.com/elliotforbes/ng-diff-match-patch#readme",
   "dependencies": {
-    "@angular/animations": "^18.2.6",
-    "@angular/common": "^18.2.6",
-    "@angular/compiler": "^18.2.6",
-    "@angular/core": "^18.2.6",
-    "@angular/forms": "^18.2.6",
-    "@angular/platform-browser": "^18.2.6",
-    "@angular/platform-browser-dynamic": "^18.2.6",
-    "@angular/router": "^18.2.6",
+    "@angular/animations": "^19.1.4",
+    "@angular/common": "^19.1.4",
+    "@angular/compiler": "^19.1.4",
+    "@angular/core": "^19.1.4",
+    "@angular/forms": "^19.1.4",
+    "@angular/platform-browser": "^19.1.4",
+    "@angular/platform-browser-dynamic": "^19.1.4",
+    "@angular/router": "^19.1.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.10"
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^18.2.6",
-    "@angular/cli": "~18.2.6",
-    "@angular/compiler-cli": "^18.2.6",
+    "@angular-devkit/build-angular": "^19.1.5",
+    "@angular/cli": "~19.1.5",
+    "@angular/compiler-cli": "^19.1.4",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
@@ -56,7 +56,7 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "karma-sinon": "^1.0.5",
     "ng-diff-match-patch": "^3.0.1",
-    "ng-packagr": "^18.2.1",
-    "typescript": "~5.4.5"
+    "ng-packagr": "^19.1.2",
+    "typescript": "~5.7.3"
   }
 }

@@ -3,7 +3,8 @@ import { DiffMatchPatchService } from './diffMatchPatch.service';
 import { Diff, DiffOp } from './diffMatchPatch';
 
 @Directive({
-  selector: '[processingDiff]'
+    selector: '[processingDiff]',
+    standalone: false
 })
 export class ProcessingDiffDirective implements OnInit, OnChanges {
   @Input() left: string = '';

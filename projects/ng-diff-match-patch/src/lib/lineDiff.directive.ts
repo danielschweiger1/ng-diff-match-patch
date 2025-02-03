@@ -3,7 +3,8 @@ import { DiffMatchPatchService } from './diffMatchPatch.service';
 import { Diff, DiffOp } from './diffMatchPatch';
 
 @Directive({
-  selector: '[lineDiff]',
+    selector: '[lineDiff]',
+    standalone: false
 })
 export class LineDiffDirective implements OnInit, OnChanges {
   @Input() left: string | number | boolean;
