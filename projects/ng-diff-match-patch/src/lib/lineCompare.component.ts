@@ -91,26 +91,34 @@ type DiffCalculation = {
     }
   `],
     template: `
-    <div class="dmp-line-compare-no-changes-text" *ngIf="isContentEqual">
-      There are no changes to display.
-    </div>    
-    <div class="dmp-line-compare" *ngIf="!isContentEqual">
-      <div class="dmp-line-compare-margin">
-        <div [ngClass]="lineDiff[0]" *ngFor="let lineDiff of calculatedDiff">
-          <div class="dmp-line-compare-left">{{lineDiff[1]}}</div><!-- No space
-        --><div class="dmp-line-compare-right">{{lineDiff[2]}}</div>
-        </div>
-        <div class="dmp-margin-bottom-spacer"></div>
-      </div><!-- No space
-   --><div class="dmp-line-compare-content">
+    @if (isContentEqual) {
+      <div class="dmp-line-compare-no-changes-text">
+        There are no changes to display.
+      </div>
+    }
+    @if (!isContentEqual) {
+      <div class="dmp-line-compare">
+        <div class="dmp-line-compare-margin">
+          @for (lineDiff of calculatedDiff; track lineDiff) {
+            <div [ngClass]="lineDiff[0]">
+              <div class="dmp-line-compare-left">{{lineDiff[1]}}</div><!-- No space
+              --><div class="dmp-line-compare-right">{{lineDiff[2]}}</div>
+            </div>
+          }
+          <div class="dmp-margin-bottom-spacer"></div>
+        </div><!-- No space
+        --><div class="dmp-line-compare-content">
         <div class="dmp-line-compare-content-wrapper">
-          <div [ngClass]="lineDiff[0]" *ngFor="let lineDiff of calculatedDiff">
-            <div class="dmp-line-compare-text">{{lineDiff[3]}}</div>
-          </div>
+          @for (lineDiff of calculatedDiff; track lineDiff) {
+            <div [ngClass]="lineDiff[0]">
+              <div class="dmp-line-compare-text">{{lineDiff[3]}}</div>
+            </div>
+          }
         </div>
       </div>
     </div>
-  `,
+    }
+    `,
     standalone: false
 })
 export class LineCompareComponent implements OnInit, OnChanges {
