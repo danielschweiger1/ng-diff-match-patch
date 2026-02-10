@@ -55,7 +55,6 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "karma-sinon": "^1.0.5",
-    "ng-diff-match-patch": "^3.0.1",
     "ng-packagr": "^21.1.0",
     "typescript": "~5.9.3"
   }
